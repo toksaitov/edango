@@ -11,6 +11,7 @@ Hoe.spec EDango::UNIX_NAME do
   self.developer EDango::AUTHOR, EDango::EMAIL
   self.url = EDango::URL
 
+  self.readme_file = 'README.rdoc'
   self.post_install_message = File.read(File.expand_path(File.join(EDANGO_ROOT, 'PostInstall.txt'))) rescue ''
 
   self.extra_deps = [['sinatra',   '>= 0.9.4'],

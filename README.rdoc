@@ -22,7 +22,7 @@ It fetches a ticket with a predefined account and replaces the initial passkey w
 
 === Gem Installation
 
-The preferred method of installation is through the Gem file. For this you will need to have RubyGems installed.
+The preferred method of installation is through the _Gem_ file. For this you will need to have *RubyGems* installed.
 You can install the application and all its dependencies with the following command:
 
     gem install edango
@@ -34,7 +34,7 @@ This can be done with the +-s+ or +--site+ flags passed with the specs to the ap
 
 === Other Installation Methods
 
-You can clone, download or whatever else to get the application package from the github.
+You can clone, download or whatever else to get the application package from the *github*.
 In this case you need to use +edango+ script directly from the +bin+ directory and you
 need to resolve all application dependencies manually.
 
@@ -49,10 +49,12 @@ need to resolve all application dependencies manually.
     EDango has started
     == Sinatra/0.9.4 has taken the stage on 6666 for production with backup from WEBrick
 
-2. Now point you browser to +http://127.0.0.1:6666+.
+2. Now point you browser to http://127.0.0.1:6666.
    Do not forget to specify the correct port provided to you by the program on the first step.
 
 3. Proceed with the instructions in your browser.
+
+The server can be stopped with a +Ctrl-C+ keyboard combination.
 
 == Command Line Usage
 
@@ -69,14 +71,14 @@ a path specified either in the +EDANGO_USER_BASE+ or in the +HOME+ environmental
 === Application Directory Structure
 
     .edango
-        logs
-        tickets
+    |-logs
+    |-tickets
 
-.edango:: contains all configuration files
++.edango+ - contains all configuration files
 
-logs:: contains application and server log files
++logs+ - contains application and server log files
 
-tickets:: contains all extracted tickets
++tickets+ - contains all extracted tickets
 
 == Development
 

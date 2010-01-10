@@ -29,14 +29,6 @@ module EDango
       File.join(DIRECTORIES[:base], 'options.yml')
     end
 
-    asset :modes do
-      File.join(DIRECTORIES[:base], 'modes.yml')
-    end
-
-    asset :tasks do
-      File.join(DIRECTORIES[:base], 'tasks.yml')
-    end
-
     asset :helpers do
       Dir[File.join(DIRECTORIES[:helpers], '**', '*.rb')]
     end

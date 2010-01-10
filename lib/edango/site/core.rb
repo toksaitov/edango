@@ -173,6 +173,10 @@ module EDango
       end
     end
 
+    not_found do
+      redirect('/')
+    end
+
   end
 
 end

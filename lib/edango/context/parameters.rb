@@ -29,13 +29,13 @@ module EDango
        :sites          => []}
     end
 
-    asset :modes, :file => FILES[:modes] do
+    asset :modes do
       {:verbose => false,
        :quiet   => false,
        :debug   => false}
     end
 
-    asset :tasks, :file => FILES[:tasks] do
+    asset :tasks do
       {:show_version => false,
        :show_help    => false}
     end
