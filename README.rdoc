@@ -28,7 +28,7 @@ You can install the application and all its dependencies with the following comm
     gem install edango
 
 Now you need to add at least one account specifications to the application configuration file.
-This can be done with the +-s+ or +--site+ flags passed with the specs to the application starter script.
+This can be done with the -s or --site flags passed with the specs to the application starter script.
 
     edango --site "URL_REGEX, TICKET_LINK_REGEX, PASSKEY[, LOGIN:PASSWORD[, LOGIN_URL]]"
 
@@ -54,7 +54,7 @@ need to resolve all application dependencies manually.
 
 3. Proceed with the instructions in your browser.
 
-The server can be stopped with a +Ctrl-C+ keyboard combination.
+The server can be stopped with a <em>Ctrl-C</em> keyboard combination.
 
 == Command Line Usage
 
@@ -74,7 +74,7 @@ a path specified either in the +EDANGO_USER_BASE+ or in the +HOME+ environmental
     |-logs
     |-tickets
 
-+.edango+ - contains all configuration files
+<em>.edango</em> - contains all configuration files
 
 +logs+ - contains application and server log files
 
