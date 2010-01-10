@@ -1,0 +1,10 @@
+#help-form-container
+  #help-form
+    %h2= emphasize(t :synopsys_title)
+    %p#help-synopsys= emphasize(t(:synopsys_text), "'")
+    %h2= emphasize(t :notes_title)
+    %ul#help-ul
+      %li
+        %p.help-note= emphasize(t(:link_note), "'")
+      %li
+        %p.help-note= emphasize(t(:passkey_note), "'")

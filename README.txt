@@ -1,0 +1,115 @@
+= Evil Dango
+
+== Description
+
+Evil Dango is a small Ruby application that can extract torrent tickets from 'torrentpier'-enabled sites.
+It fetches a ticket with a predefined account and replaces the initial passkey with the new defined one.
+
+== Requirements
+
+* Ruby 1.8.6 or later
+
+=== Dependencies
+
+* sinatra (version 0.9.4 or later)
+* mechanize (version 0.9.3 or later)
+
+=== Extra Development Dependencies
+
+* hoe (version 2.5.0 or later)
+
+== Installation
+
+=== Gem Installation
+
+The preferred method of installation is through the Gem file. For this you will need to have RubyGems installed.
+You can install the application and all its dependencies with the following command:
+
+    gem install edango
+
+Now you need to add at least one account specifications to the application configuration file.
+This can be done with the '-s' or '--site' flags passed with the specs to the application starter script.
+
+    edango --site "URL_REGEX, TICKET_LINK_REGEX, PASSKEY[, LOGIN:PASSWORD[, LOGIN_URL]]"
+
+=== Other Installation Methods
+
+You can clone, download or whatever else to get the application package from the github.
+In this case you need to use 'edango' script directly from the 'bin' directory and you
+need to resolve all application dependencies manually.
+
+== Application Usage
+
+1. Start EDango with the following command:
+
+    edango
+
+   You will see something similar to this:
+
+    EDango has started
+    == Sinatra/0.9.4 has taken the stage on 6666 for production with backup from WEBrick
+
+2. Now point you browser to 'http://127.0.0.1:6666'.
+   Do not forget to specify the correct port provided to you by the program on the first step.
+
+3. Proceed with the instructions in your browser.
+
+== Command Line Usage
+
+The list of command line options can be obtained from the EDango executable by one of the following calls:
+
+    edango -h
+    edango --help
+
+== Application Directory
+
+'.edango' is a default application directory that can be usually found under a path
+specified either in the 'EDANGO_USER_BASE' or in the 'HOME' environmental variable.
+
+=== Application Directory Structure
+
+    .edango
+        logs
+        tickets
+
+.edango:: contains all configuration files
+
+logs:: contains application and server log files
+
+tickets:: contains all extracted tickets
+
+== Development
+
+=== Source Repositories
+
+EDango is currently hosted at RubyForge and GitHub.
+
+The RubyForge page
+* http://rubyforge.org/projects/edango
+
+The github web page
+* http://github.com/toksaitov/edango
+
+The public git clone URL
+* http://github.com/toksaitov/edango.git
+
+== Contact Information
+
+Author:: Toksaitov Dmitrii Alexandrovich <toksaitov.d@gmail.com>
+
+== License
+
+(The GNU General Public License)
+
+EDango - torrent ticket extractor.
+Copyright (C) 2010 Toksaitov Dmitrii Alexandrovich
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.

@@ -1,0 +1,15 @@
+!!! Strict
+%html{ :xmlns => 'http://www.w3.org/1999/xhtml' }
+  %head
+    %title= t(:agent_title)
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "Content-Type" }
+    %link{ :href => "/favicon.ico", :rel => "shortcut icon" }
+    %link{ :href => "/styles/layout.css", :rel => "stylesheet", :type => "text/css" }
+    %script{ :type => "text/javascript", :src => "/scripts/#{current_jlib}" }
+    %script{ :type => "text/javascript", :src => "/scripts/logic.js" }
+  %body
+    #main-container
+      #title
+        %p#app-name Evil <em>Dango</em>
+        %p#app-synopsis= t(:description)
+      = yield

@@ -1,0 +1,27 @@
+- if error? :in_process
+  = haml(:errors, :layout => false)
+#process-form-container
+  %form#process-form{ :action => '/process', :method => 'post' }
+    %fieldset
+      - if error? :in_url
+        .label-balancer
+          %p.err-label= error :in_url
+      .field-balancer
+        %label#url-label
+          = emphasize(t :url_label)
+          %input{ :name => 'url', :type => 'text', :title => t(:url_hint),
+                  :value => @url, :class => url_input_class }/
+      - if error? :in_passkey
+        .label-balancer
+          %p.err-label= error :in_passkey
+      .field-balancer
+        %label#passkey-label
+          = emphasize(t :passkey_label)
+          %input{ :name => 'passkey', :type => 'text', :title => t(:passkey_hint),
+                  :value => @passkey, :class => passkey_input_class }/
+      .controls
+        %input#process-button{ :name => 'process', :title => t(:process_hint),
+                               :type => 'submit',  :value => 'process ^' }/
+= haml(:help, :layout => false)
+#help-button
+  %a#help-link{ :href => '#', :title => t(:help_hint) } ?

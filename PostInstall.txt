@@ -1,0 +1,6 @@
+Thank you for installing the Evil Dango application
+
+Please be sure to read README.txt and History.txt
+for useful information about this release.
+
+For more info, visit http://github.com/toksaitov/edango

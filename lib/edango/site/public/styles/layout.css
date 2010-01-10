@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+*
+{
+    margin: 0; padding: 0;
+}
+
+html, body
+{
+    height: 100%;
+}
+
+body
+{
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 13.44px;
+}
+
+em
+{
+    font-style: normal;
+    color: #cc0000;
+}
+
+h1, h2
+{
+    font-weight: bold;
+}
+
+h1
+{
+    font-size: 1.5em;
+}
+
+h2
+{
+    font-size: 1.2em;
+}
+
+a
+{
+    font-size: 1.2em;
+    margin-bottom: 0.4em;
+    color: #cc0000;
+}
+
+a:hover
+{
+    color: #ff3333;
+}
+
+a:active
+{
+    color: #990000;
+}
+
+fieldset
+{
+    border: none;
+}
+
+#result-ul
+{
+    margin: .4em 0 0.3em 2.3em;
+}
+
+#result-ul li
+{
+    margin-bottom: 0.5em;
+    list-style-image: url("../images/bullet.png");
+}
+
+#err-spec-ul
+{
+    margin: .5em 0 0 2em;
+}
+
+#err-spec-ul li
+{
+    margin: 0.5em 0 0.5em 0;
+    list-style-image: url("../images/bullet.png");
+}
+
+#err-ul, #help-ul
+{
+    margin: .4em 0 0 1.5em;
+    color: #cc0000;
+}
+
+#err-ul li
+{
+    margin: 0.6em 0 0.3em 0;
+    list-style: disc none;
+}
+
+#help-ul li
+{
+    margin: 0.6em 0 0.3em 0;
+    list-style: disc none;
+}
+
+#main-container
+{
+    width: 45em;
+    margin: 1em auto 0 auto;
+    background: url("../images/logo.png") no-repeat;
+}
+
+#title
+{
+    padding: 182px 0 0 250px;
+}
+
+#title #app-name
+{
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #000000;
+}
+
+#title #app-synopsis
+{
+    font-size: 2em;
+    padding-left: .4em;
+    color: #999999;
+}
+
+#process-form-container, #result-form-container, #err-form-container
+{
+    -moz-border-radius: 1.5em;
+    -webkit-border-radius: 1.5em;
+    border-radius: 1.5em;
+    width: 38em;
+    margin: .6em .4em 0 auto;
+}
+
+#process-form-container, #result-form-container
+{
+    background-image: url("../images/frm-back.png");
+}
+
+#err-form-container
+{
+    background-image: url("../images/frm-back-err.png");
+}
+
+#help-form-container
+{
+    background-image: url("../images/frm-back-help.png");
+}
+
+#help-form-container
+{
+    -moz-border-radius: 1.5em 1.5em 0 0;
+    -webkit-border-radius: 1.5em 1.5em 0 0;
+    border-radius: 1.5em 1.5em 0 0;
+    width: 38em;
+    margin: 0 .4em 0 auto;
+    display: none;
+}
+
+#process-form, #result-form, #err-form, #help-form
+{
+    vertical-align: middle;
+    padding: 1.1em 20px 1.1em 15px;
+}
+
+#err-form, #help-form
+{
+    padding-bottom: 1.1em;
+}
+
+#help-synopsys
+{
+    margin: 1em 0 1em 0.3em;
+    text-align: justify;
+}
+
+.help-note
+{
+    color: #000000;
+}
+
+.err-label
+{
+    width: 22.5em;
+    font-size: .91em;
+    margin-bottom: -0.5em;
+    color: #cc0000;
+}
+
+.label-balancer
+{
+    font-size: 1.4em;
+    float: right;
+    margin-top: .2em;
+}
+
+.field-balancer
+{
+    float: right;
+    margin: .6em 0 .3em 0;
+}
+
+#url-label, #passkey-label
+{
+    font-size: 1.4em;
+    text-align: right;
+    vertical-align: middle;
+}
+
+#passkey-label input
+{
+    color: #cc0000;
+}
+
+.err-text, .normal-text
+{
+    width: 22.5em;
+    font-size: .91em;
+    vertical-align: middle;
+    border: 1px solid;
+}
+
+.normal-text
+{
+    border-color: #ffffff;
+    background: url("../images/ctrl-back.gif") 0 -75px;
+}
+
+.err-text
+{
+    border-color: #ff9999;
+    background: url("../images/ctrl-back.gif") 0 -99px;
+}
+
+#process-button, #more-button
+{
+    width: 7.8em; height: 25px;
+    clear: both; float: right;
+    margin-top: .5em;
+    font-weight: bold;
+    border: none;
+    color: #ffffff;
+    background: url("../images/ctrl-back.gif") 0 0;
+}
+
+#process-button:hover, #more-button:hover
+{
+    background-position: 0 -25px;
+}
+
+#process-button:active, #more-button:active
+{
+    background-position: 0 -50px;
+}
+
+#help-button
+{
+    width: 27px; height: 16px;
+    text-align: center;
+    margin: 0 0 0 8em;
+    background: url("../images/btn-back-help.png") 0 0;
+}
+
+#help-button a
+{
+    font-size: 0.9em;
+    text-decoration: none;
+}

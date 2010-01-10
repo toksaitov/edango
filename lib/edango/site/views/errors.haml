@@ -1,0 +1,12 @@
+#err-form-container
+  #err-form
+    %h1= emphasize(t :error_form_title)
+    %ul#err-spec-ul
+      - error(:in_process).each do |error_spec|
+        %li
+          %h2
+            = t(:error_list_title)
+            %em= error_spec.first
+          %ul#err-ul
+            - error_spec[1..-1].each do |description|
+              %li= description

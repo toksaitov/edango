@@ -1,0 +1,10 @@
+#result-form-container
+  %form#result-form{ :action => '/', :method => 'post' }
+    %fieldset
+      %h1= emphasize(t :result_form_title)
+      %ul#result-ul
+        = list_of(@tickets) do |ticket|
+          %a{ :href => "#{link ticket}", :title => "#{t :ticket_link_title}" }= file(ticket)
+      .controls
+        %input#more-button{ :name => 'more',   :title => t(:more_hint),
+                            :type => 'submit', :value => 'more >' }/
