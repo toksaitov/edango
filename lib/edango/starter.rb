@@ -22,13 +22,15 @@ module EDango
 
   class Starter
     SPECS =
-      {:site_flag =>
-         ['-s', '--site URL_REGEX,TICKET_LINK_REGEX,PASSKEY[,LOGIN:PASSWORD[,LOGIN_URL]]',
-          'Adds site specifications used to obtain a ticket.'],
+      {:account_flag =>
+         ['-a', '--account URL_REGEX,TICKET_LINK_REGEX,PASSKEY[,LOGIN:PASSWORD[,LOGIN_URL]]',
+          'Adds account specifications used to obtain a ticket.'],
        :clear_flag =>
-         ['-c', '--clear', 'Clear all site specifications from the configuration.'],
-       :parameters_flag =>
-         ['-p', '--parameters NAME:VALUE[,NAME:VALUE]', 'Specifies parameters for the Sinatra library.'],
+         ['-c', '--clear', 'Clear all account specifications from the configuration.'],
+       :server_flag =>
+         ['-s', '--server NAME:VALUE[,NAME:VALUE]', 'Specifies parameters for the "Sinatra" library.'],
+       :proxy_flag =>
+         ['-p', '--proxy HOST:PORT[:USER:PASSWORD]', 'Specifies proxy server parameters.'],
        :version_flag =>
          ['-v', '--version', 'Displays version information and exits.'],
        :help_flag =>
@@ -95,7 +97,7 @@ module EDango
           @modes[:debug] = true
         end
 
-        on_argument(:site_flag) do |specs|
+        on_argument(:account_flag) do |specs|
           specs = specs.split(',').map(&:strip) rescue []
 
           url_regex, ticket_link_regex, passkey, account, login_url = specs
@@ -110,12 +112,21 @@ module EDango
           @options[:sites] = []
         end
 
-        on_argument(:parameters_flag) do |params|
+        on_argument(:server_flag) do |params|
           params = Hash[*params.split(',').map { |item| item.split(':').map(&:strip) }.flatten] rescue nil
           params.try(:intern_keys!)
 
           @options[:parameters] ||= []
           @options[:parameters] << params if params
+        end
+
+        on_argument(:proxy_flag) do |specs|
+          specs = specs.split(':') rescue nil
+
+          @options[:proxy] = nil
+          @options[:proxy] = specs unless specs.nil? or
+                                          specs[0].nil_or_empty? or
+                                          specs[1].nil_or_empty?
         end
 
         @parser.parse!(@environment.arguments)

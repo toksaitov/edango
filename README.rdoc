@@ -28,9 +28,10 @@ You can install the application and all its dependencies with the following comm
     gem install edango
 
 Now you need to add at least one account specifications to the application configuration file.
-This can be done with the -s or --site flags passed with the specs to the application starter script.
+This can be done with the <tt>-a</tt> or <tt>--account</tt> flags passed with the specs
+to the application starter script.
 
-    edango --site "URL_REGEX, TICKET_LINK_REGEX, PASSKEY[, LOGIN:PASSWORD[, LOGIN_URL]]"
+    edango --account "URL_REGEX, TICKET_LINK_REGEX, PASSKEY[, LOGIN:PASSWORD[, LOGIN_URL]]"
 
 === Other Installation Methods
 
