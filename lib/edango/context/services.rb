@@ -90,6 +90,12 @@ module EDango
       end
     end
 
+    service :views_processor do
+      on_creation do
+        require 'haml'; Haml
+      end
+    end
+
     service :agent do
       on_creation do
         require 'mechanize'

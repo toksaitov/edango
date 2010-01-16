@@ -25,7 +25,7 @@ $LOAD_PATH.unshift(current_dir) unless $LOAD_PATH.include?(current_dir) or
 module EDango
   FULL_NAME = 'EDango'
   UNIX_NAME = 'edango'
-  VERSION   = '0.5.2'
+  VERSION   = '0.5.3'
 
   AUTHOR = 'Toksaitov Dmitrii Alexandrovich'
 

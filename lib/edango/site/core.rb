@@ -39,7 +39,9 @@ module EDango
     disable :methodoverride
 
     configure do
-      set :options, SERVICES[:environment].options
+      EDango::SERVICES[:views_processor]
+
+      set :options, EDango::SERVICES[:environment].options
 
       set :environment, (ENV['RACK_ENV'] || options[:environment]).intern()
 
