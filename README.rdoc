@@ -98,7 +98,8 @@ The public git clone URL
 
 == Contact Information
 
-Author:: Toksaitov Dmitrii Alexandrovich <toksaitov.d@gmail.com>
+Author:: Toksaitov Dmitrii <toksaitov.d@gmail.com>
+Awesome Art by:: Erik Kasymkoulov <ewok33parrots@gmail.com>
 
 == License
 
