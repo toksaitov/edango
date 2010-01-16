@@ -124,9 +124,10 @@ module EDango
           specs = specs.split(':') rescue nil
 
           @options[:proxy] = nil
-          @options[:proxy] = specs unless specs.nil? or
-                                          specs[0].nil_or_empty? or
-                                          specs[1].nil_or_empty?
+          if specs
+            @options[:proxy] = specs unless specs[0].nil_or_empty? or
+                                            specs[1].nil_or_empty?
+          end
         end
 
         @parser.parse!(@environment.arguments)

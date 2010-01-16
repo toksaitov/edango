@@ -99,9 +99,11 @@ module EDango
           agent.history.max_size = 0
 
           proxy = EDango::PARAMETERS[:options][:proxy]
-          agent.set_proxy(*proxy) unless proxy.nil? or
-                                         proxy[0].nil_or_empty? or
-                                         proxy[1].nil_or_empty?
+
+          if proxy
+            agent.set_proxy(*proxy) unless proxy[0].nil_or_empty? or
+                                           proxy[1].nil_or_empty?
+          end
         end
       end
     end
