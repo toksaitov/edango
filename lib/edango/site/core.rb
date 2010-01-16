@@ -56,22 +56,22 @@ module EDango
         self.class.set(param, value)
       end
 
-      set :errors, {}
+      set :errors_list, {}
     end
 
     helpers do
       def error(key, value = nil)
-        value ? options.errors[key] = value : options.errors[key]
+        value ? options.errors_list[key] = value : options.errors_list[key]
       end
       alias err error
 
       def error?(key)
-        options.errors[key] ? true : false
+        options.errors_list[key] ? true : false
       end
       alias err? error?
 
       def clear_errors
-        options.errors.clear()
+        options.errors_list.clear()
       end
 
       def current_jlib
@@ -148,7 +148,7 @@ module EDango
 
       @tickets = extract_tickets(url, passkey)
 
-      unless options.errors.empty?
+      unless options.errors_list.empty?
         response.set_cookie('url', url)
 
         redirect('/')
@@ -166,7 +166,7 @@ module EDango
         error :in_process, [[t(:specified_file), t(:file_not_found)]]
       end
 
-      unless options.errors.empty?
+      unless options.errors_list.empty?
         redirect('/')
       else
         send_file(file)

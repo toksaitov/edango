@@ -22,7 +22,7 @@ module EDango
     asset :options, :file => FILES[:options] do
       {:environment    => :production,
        :server_logging => true,
-       :time_limit     => 120,
+       :time_limit     => 100,
        :servers        => ['thin', 'mongrel', 'webrick'],
        :host           => '0.0.0.0',
        :port           => 6666,
