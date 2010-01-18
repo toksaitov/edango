@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{edango}
-  s.version = "0.5.3"
+  s.version = "0.5.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Toksaitov Dmitrii Alexandrovich"]
-  s.date = %q{2010-01-17}
+  s.date = %q{2010-01-19}
   s.default_executable = %q{edango}
   s.description = %q{Evil Dango is a small Ruby application that can extract torrent tickets from 'torrentpier'-enabled sites.
 

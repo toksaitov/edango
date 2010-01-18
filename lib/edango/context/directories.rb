@@ -21,8 +21,8 @@ require 'edango/di/container'
 module EDango
 
   DIRECTORIES = DI::Container.new do
-    asset :base do
-      File.prepare_directory(File.join('~', ".#{UNIX_NAME}"))
+    asset :user_base do
+      File.prepare_directory(USER_BASE_DIRECTORY)
     end
 
     asset :helpers do
@@ -54,11 +54,11 @@ module EDango
     end
 
     asset :tickets do
-      File.prepare_directory(File.join(DIRECTORIES[:base], 'tickets'))
+      File.prepare_directory(File.join(DIRECTORIES[:user_base], 'tickets'))
     end
 
     asset :log do
-      File.prepare_directory(File.join(DIRECTORIES[:base], 'logs'))
+      File.prepare_directory(File.join(DIRECTORIES[:user_base], 'logs'))
     end
   end
 

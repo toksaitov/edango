@@ -26,7 +26,7 @@ module EDango
     end
 
     asset :options do
-      File.join(DIRECTORIES[:base], 'options.yml')
+      File.join(DIRECTORIES[:user_base], 'options.yml')
     end
 
     asset :helpers do
