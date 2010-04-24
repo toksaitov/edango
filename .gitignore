@@ -1,9 +1,9 @@
-.idea
-releases
-pkg
 doc
-.DS_Store
+pkg
+releases
 tmp
-*.log
-.test-result
+.DS_Store
+.idea
 *.gem
+*.log
+*~

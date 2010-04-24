@@ -7,7 +7,8 @@ It fetches a ticket with a predefined account and replaces the initial passkey w
 
 == Requirements
 
-* Ruby 1.8.6 or later
+* Ruby  1.8.6 or later
+* JRuby 1.4.0 or later
 
 === Dependencies
 
@@ -99,7 +100,7 @@ The public git clone URL
 == Contact Information
 
 Author:: Toksaitov Dmitrii <toksaitov.d@gmail.com>
-Awesome Art by:: Erik Kasymkoulov <ewok33parrots@gmail.com>
+Awesome art by:: Erik Kasymkoulov <ewok33parrots@gmail.com>
 
 == License
 
